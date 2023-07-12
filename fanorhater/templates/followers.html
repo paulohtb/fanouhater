@@ -1,0 +1,48 @@
+<head>
+    <title>Fan OR Hater - Followers</title>
+    <link href="static/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo"></a>
+            <ul class="navbar">
+                <li><a id="btn">Home</a></li>
+                <li><a href="/main">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main2">
+      <div class="followersbox">
+        <span class="textoU">Pessoas que seguem você:</span>
+        {% for username, date in content %}
+          {% if loop.index is even %}
+            <div class="linha-cinza">
+              <div class="c">{{ username }} | {{ date }}</div>
+            </div>
+          {% else %}
+            <div class="linha-branca">
+              <div class="b">{{ username }} | {{ date }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <script>
+        const m2 = document.querySelector(".main2");
+        const feb = document.querySelector(".followersbox");
+        document.getElementById("btn").onclick = function(){
+            m2.classList.add("transitionmain2out");
+            feb.classList.add("transitionfebout");
+            setTimeout(function() {
+                window.location.href = "/";
+            }, 900);
+        };
+    </script>
+
+</body>
+

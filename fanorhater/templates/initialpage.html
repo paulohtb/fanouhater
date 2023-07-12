@@ -1,0 +1,62 @@
+<head>
+    <title>Fan OR Hater</title>
+    <link href="static/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a class="logo"></a>
+            <ul class="navbar">
+                <li><a id="btn1">Home</a></li>
+                <li><a href="/main">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main1">
+        <div class="texto">
+            <h1 class="brancog">Às vezes um fã... Vira um hater...
+                <br>Está achando que é famoso?
+                <br>Só no <span class="textoI">Instagram</span>...
+            </h1>
+            <div class="cinzap">
+                <span class="cinzaI">Já parou para notar alguma vez na sua conta que o número de pessoas que</span>
+                <br><span class="cinzaI">você segue e o número de pessoas que te seguem não está muito compatível?</span>
+                <br><span class="cinzaI">Notou que o seu número de seguidores deu uma caída e você não consegue</span>
+                <br><span class="cinzaI">descobrir quais fãs viraram haters? Bom... se isso de fato incomoda e você</span>
+                <br><span class="cinzaI">quer caçá-los, estou aqui para isso! Neste site, com apenas duas pastas,</span>
+                <br><span class="cinzaI">consigo te dizer exatamente o @ dessas pobres almas que você está caçando.</span>
+            </div>
+            <a class="button btn_vamos_la" id="btn">Vamos lá</a>
+        </div>
+
+        <script>
+            const button = document.querySelector(".btn_vamos_la");
+            const txti = document.querySelector(".brancog");
+            const cp = document.querySelector(".cinzap");
+            const m1 = document.querySelector(".main1");
+            document.getElementById("btn").onclick = function () {
+                cp.classList.add("transitioncinzapout");
+                txti.classList.add("transitionbrancogout");
+                button.classList.add("transitionbtnout");
+                m1.classList.add("transitionmain1out");
+                setTimeout(function () {
+                    window.location.replace("/uploads");
+                }, 900);
+            };
+            document.getElementById("btn1").onclick = function () {
+                cp.classList.add("transitioncinzapout");
+                txti.classList.add("transitionbrancogout");
+                button.classList.add("transitionbtnout");
+                setTimeout(function () {
+                    window.location.replace("/");
+                }, 900);
+            };
+        </script>
+
+    </div>
+
+</body>

@@ -1,0 +1,54 @@
+<head>
+    <title>Fan OR Hater</title>
+    <link href="static/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a class="logo"></a>
+            <ul class="navbar">
+                <li><a id="btn">Home</a></li>
+                <li><a href="/main">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main2">
+        <div class="uploadbox">
+            <div class="uploadcard">
+                <span class="textoU">Upload dos Arquivos</span>
+                <form action="/choices" class="dropbox" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" multiple/>
+                    <div class="btn_upload_container">
+                        <a class="button btn_upload" id="btn1">upload<input type="submit"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            const m2 = document.querySelector(".main2");
+            const ub = document.querySelector(".uploadbox");
+            document.getElementById("btn1").addEventListener("click", function (event) {
+                event.preventDefault();
+                ub.classList.add("transitionupout");
+                setTimeout(function () {
+                    document.querySelector("form").submit();
+                }, 900);
+            });
+            document.getElementById("btn").onclick =
+            function(){
+                m2.classList.add("transitionmain2out");
+                ub.classList.add("transitionupout");
+                setTimeout(function() {
+                    window.location.replace("/");
+                }, 900);
+            };
+        </script>
+
+    </div>
+
+</body>

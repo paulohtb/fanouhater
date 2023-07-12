@@ -1,0 +1,61 @@
+<head>
+    <title>Fan OR Hater - Choices</title>
+    <link href="static/style.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a class="logo"></a>
+            <ul class="navbar">
+                <li><a id="btn">Home</a></li>
+                <li><a href="/main">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main2">
+        <div class="choicesbox">
+            <div class="choicescard">
+                <span class="textoU">Escolha o que quer ver:</span>
+                <a class="btn3" id="btn1">Seguindo</a>
+                <a class="btn3" id="btn2">Seguidores</a>
+                <a class="btn3" id="btn3">Não segue de volta</a>
+            </div>
+        </div>
+
+        <script>
+            const m2 = document.querySelector(".main2");
+            const cb = document.querySelector(".choicesbox");
+            document.getElementById("btn1").onclick = function(){
+                cb.classList.add("transitioncbout");
+                setTimeout(function () {
+                    window.location.href = "/following";
+                }, 100);
+            };
+            document.getElementById("btn2").onclick = function(){
+                cb.classList.add("transitioncbout");
+                setTimeout(function () {
+                    window.location.href = "/followers";
+                }, 100);
+            };
+            document.getElementById("btn3").onclick = function(){
+                cb.classList.add("transitioncbout");
+                setTimeout(function () {
+                    window.location.href = "/notfollowers";
+                }, 100);
+            };
+            document.getElementById("btn").onclick = function(){
+                m2.classList.add("transitionmain2out");
+                cb.classList.add("transitioncbhout");
+                setTimeout(function() {
+                    window.location.href = "/";
+                }, 900);
+            };
+        </script>
+
+    </div>
+
+</body>

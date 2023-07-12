@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #D70270, #734F96, #0038A8);
+    height: 8vh;
+    overflow-y: hidden;
+}
+.navbar li {
+    cursor: pointer;
+    margin-right: 3vh;
+    letter-spacing: 0.45vh;
+    margin-left: 3vh;
+    padding: 1.5vh 1.5vh;
+    border-radius: 1vh;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
+    transition-duration: 0.5s;
+    font-size: 2.5vh;
+}
+.navbar li:hover {
+    background-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15), 0 10px 10px 0 rgba(0,0,0,0.25);
+}
+img {
+    margin-left: 2.5vh;
+    height: 6.5vh;
+    transition: transform 1s;
+}
+img:hover {
+    opacity: 0.5;
+    transform: rotate(-360deg);
+}
+
+
+
+
+
+html, body {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+body.stop-transitions * {
+  transition: none !important;
+}
+.main1 {
+    background-color: #2d2d2d;
+    background-size: cover;
+    height: 92vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.transitionmain1out {
+    animation: black_to_white 1s ease-in;
+}
+.main2 {
+    background-color: white;
+    background-size: cover;
+    height: 92vh;
+    overflow-x: hidden;
+}
+.transitionmain2out {
+    animation: white_to_black 1s ease-in;
+}
+
+
+
+
+
+.texto {
+    cursor: default;
+    padding-top: 15vh;
+    padding-left: 10vh;
+}
+.brancog {
+    font-size: 5vh;
+    color: white;
+    animation: t-leftin 0.7s ease-out;
+}
+.transitionbrancogout {
+    animation: t-leftout 0.45s ease-in 0.55s;
+}
+.textoI{
+    background-image: linear-gradient(to right, #D70270, #734F96, #0038A8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: t-leftin 0.9s ease-out;
+}
+.textoU{
+    background-image: linear-gradient(to right, #D70270, #734F96, #0038A8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.cinzap{
+    padding-top: 5vh;
+    font-size: 2.5vh;
+    font-weight: bold;
+    max-width: 120vh;
+    color: gray;
+    animation: t-leftin 1.2s ease-out;
+}
+.transitioncinzapout {
+    animation: t-leftout 0.9s ease-in 0.1s;
+}
+.cinzaI{
+    transition: 1s linear;
+}
+.cinzaI:hover{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #D70270, #734F96, #0038A8);
+}
+
+
+
+
+
+.btn_vamos_la {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 8vh;
+    margin-top: 5vh;
+    background-color: white;
+    color: black;
+    padding: 2.5vh 4.5vh;
+    border-radius: 1vh;
+    font-size: 4vh;
+    font-weight: bold;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.25);
+    transition-duration: 0.35s;
+    animation: ttopin 1.4s ease-in;
+}
+.btn_vamos_la:hover {
+    color: white;
+    background-image: linear-gradient(to right, #D70270, #734F96, #0038A8);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.45), 0 17px 22px 0 rgba(0,0,0,0.35), 0 22px 22px 0 rgba(0,0,0,0.25);
+}
+.transitionbtnout {
+    animation: topout 1s ease-in;
+}
+
+
+
+
+
+.uploadbox {
+    position: absolute;
+    top: 12vh;
+    left: 30vh;
+    width: 140vh;
+    height: 84vh;
+    background-color: #2d2d2d;
+    border-radius: 50px;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.35), 0 17px 22px 0 rgba(0,0,0,0.25), 0 22px 22px 0 rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: tleftin 1s ease-in;
+}
+.transitionupout {
+    animation: tleftout 1s ease-in;
+}
+.uploadcard {
+    width: 120vh;
+    height: 42vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.45), 0 17px 22px 0 rgba(0,0,0,0.35), 0 22px 22px 0 rgba(0,0,0,0.25);
+    padding-top: 1vh;
+    text-align: center;
+}
+.uploadcard span{
+    font-size: 3.6vh;
+    font-weight: bold;
+}
+.dropbox {
+    width: 112vh;
+    height: 31vh;
+    margin-left: 4vh;
+    margin-top: 2vh;
+    border: 3px dotted #2d2d2d;
+    border-radius: 15px;
+    background-color: lightgray;
+    background-clip: padding-box;
+    align-items: center;
+    justify-content: center;
+}
+.uploadcard input {
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    border-radius: 15px;
+}
+.btn_upload {
+    position: absolute;
+    text-decoration: none;
+    bottom: 27vh;
+    left: 56vh;
+    height: 10%;
+    width: 20%;
+    background-color: #2d2d2d;
+    color: white;
+    padding-top: 2vh;
+    border-radius: 1vh;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.25);
+    transition: 0.35s;
+    font-size: 3vh;
+}
+.btn_upload input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.btn_upload input:hover {
+    transform: translateY(-5px);
+}
+.btn_upload:hover {
+    color: white;
+    background-image: linear-gradient(to right, #D70270, #734F96, #0038A8);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.45), 0 17px 22px 0 rgba(0,0,0,0.35), 0 22px 22px 0 rgba(0,0,0,0.25);
+}
+
+
+
+
+
+.choicesbox {
+    position: absolute;
+    top: 12vh;
+    left: 30vh;
+    width: 140vh;
+    height: 84vh;
+    background-color: #2d2d2d;
+    border-radius: 50px;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.35), 0 17px 22px 0 rgba(0,0,0,0.25), 0 22px 22px 0 rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: t-leftin 1s ease-in;
+}
+.transitioncbhout {
+    animation: tleftout 1s ease-in;
+}
+.transitioncbout {
+    animation: t-leftout 1s ease-in;
+}
+.choicescard {
+    width: 120vh;
+    height: 42vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.45), 0 17px 22px 0 rgba(0,0,0,0.35), 0 22px 22px 0 rgba(0,0,0,0.25);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.choicesbox span{
+    font-size: 3.6vh;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.btn3 {
+    cursor: pointer;
+    text-decoration: none;
+    height: 20%;
+    width: 40%;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 1vh;
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.25);
+    transition: 0.35s;
+    font-size: 3vh;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn3 input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.btn3 input:hover {
+    transform: translateY(-5px);
+}
+.btn3:hover {
+  color: white;
+    background-image: linear-gradient(to right, #D70270, #734F96, #0038A8);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 12px 0 rgba(0,0,0,0.45), 0 17px 22px 0 rgba(0,0,0,0.35), 0 22px 22px 0 rgba(0,0,0,0.25);
+}
+
+
+
+
+
+.followingbox {
+    position: absolute;
+    top: 12vh;
+    left: 30vh;
+    width: 140vh;
+    height: 84vh;
+    background-color: #2d2d2d;
+    border-radius: 50px;
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.35), 0 17px 22px 0 rgba(0, 0, 0, 0.25), 0 22px 22px 0 rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 50px;
+    animation: tleftin 1s ease-in;
+    text-align: center;
+}
+.transitionfibout {
+    animation: tleftout 1s ease-in;
+}
+.followingbox span{
+    font-size: 3.6vh;
+    font-weight: bold;
+}
+.followingbox .b {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+.followingbox .c {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-top: 10px;
+}
+
+
+
+
+
+.followersbox {
+    position: absolute;
+    top: 12vh;
+    left: 30vh;
+    width: 140vh;
+    height: 84vh;
+    background-color: #2d2d2d;
+    border-radius: 50px;
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.35), 0 17px 22px 0 rgba(0, 0, 0, 0.25), 0 22px 22px 0 rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 50px;
+    animation: tleftin 1s ease-in;
+    text-align: center;
+}
+.transitionfebout {
+    animation: tleftout 1s ease-in;
+}
+.followersbox span{
+    font-size: 3.6vh;
+    font-weight: bold;
+}
+.followersbox .b {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+.followersbox .c {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-top: 10px;
+}
+
+
+
+
+
+.notfollowersbox {
+    position: absolute;
+    top: 12vh;
+    left: 30vh;
+    width: 140vh;
+    height: 84vh;
+    background-color: #2d2d2d;
+    border-radius: 50px;
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.35), 0 17px 22px 0 rgba(0, 0, 0, 0.25), 0 22px 22px 0 rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 50px;
+    animation: tleftin 1s ease-in;
+    text-align: center;
+}
+.transitionnfbout {
+    animation: tleftout 1s ease-in;
+}
+.notfollowersbox span{
+    font-size: 3.6vh;
+    font-weight: bold;
+}
+.notfollowersbox .b {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+.notfollowersbox .c {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: lightgray;
+    margin-top: 10px;
+}
+
+
+
+
+
+@keyframes black_to_white {
+      0% { background-color: #2d2d2d; }
+    100% { background-color:   white; }
+}
+@keyframes white_to_black {
+      0% { background-color:   white; }
+    100% { background-color: #2d2d2d; }
+}
+@keyframes ttopin {
+      0% { margin-top: 100%; }
+    100% { margin-top:   0%; }
+}
+@keyframes topout {
+      0% { margin-top:   0%; }
+    100% { margin-top: 100%; }
+}
+@keyframes tleftin {
+      0% { margin-left: 100%; }
+    100% { margin-left:   0%; }
+}
+@keyframes tleftout {
+      0% { margin-left:   0%; }
+    100% { margin-left: 100%; }
+}
+@keyframes t-leftin {
+      0% { margin-left: -100%; }
+    100% { margin-left:   -0%; }
+}
+@keyframes t-leftout {
+      0% { margin-left:   -0%; }
+    100% { margin-left: -100%; }
+}
